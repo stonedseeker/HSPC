@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import static java.lang.Math.abs;
 
-public class AreaTriangles {
+public class AreaRectangles {
     public static void main(String[] args) {
         float[][] rectInputs =  takingInput();
         RectangleArea(rectInputs);
@@ -14,7 +14,7 @@ public class AreaTriangles {
     static float[][] takingInput(){
         Scanner in = new Scanner(System.in);
 
-        System.out.println("Enter the triangles you want to compare");
+        System.out.println("Enter the number of Rectangles you want to compare");
         int n = in.nextInt();
 
         float[][] rectInputs = new float[n][6];
@@ -42,7 +42,7 @@ public class AreaTriangles {
         System.out.println(Arrays.toString(areas));
 
         for (int i = 0, j = 0; i < rectInputs.length && j < rectInputs[i].length; i++, j++) {
-            System.out.println("The area of the triangle with the vertices" + "(" + rectInputs[i][j] + ")" + " is " + areas[i]);
+            System.out.println("The area of the rectangle with the vertices" + "(" + rectInputs[i][j] + ")" + " is " + areas[i]);
         }
 
     }
