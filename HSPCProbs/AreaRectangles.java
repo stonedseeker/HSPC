@@ -1,5 +1,3 @@
-
-
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -30,10 +28,6 @@ public class AreaRectangles {
 
     static float[] RectangleArea(float[][] rectInputs) {
 
-
-        for (int i = 0; i < rectInputs.length; i++) {
-            System.out.println(Arrays.toString(rectInputs[i]));
-        }
         float[] areas = new float[rectInputs.length];
 
         for (int i = 0; i < rectInputs.length; i++) {
@@ -46,7 +40,6 @@ public class AreaRectangles {
     }
 
     static void output(float[][] rectInputs, float[] areas){
-        System.out.println(Arrays.toString(areas));
 
         for (int i = 0, j = 0; i < rectInputs.length && j < rectInputs[i].length; i++, j++) {
             System.out.println("The area of the rectangle with the vertices" + "(" + rectInputs[i][j] + ")" + " is " + areas[i]);
