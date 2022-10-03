@@ -8,7 +8,8 @@ import static java.lang.Math.abs;
 public class AreaRectangles {
     public static void main(String[] args) {
         float[][] rectInputs =  takingInput();
-        RectangleArea(rectInputs);
+        float[] areaValues = RectangleArea(rectInputs);
+        output(rectInputs, areaValues);
     }
 
     static float[][] takingInput(){
@@ -27,7 +28,7 @@ public class AreaRectangles {
         return rectInputs;
     }
 
-    static void RectangleArea(float[][] rectInputs) {
+    static float[] RectangleArea(float[][] rectInputs) {
 
 
         for (int i = 0; i < rectInputs.length; i++) {
@@ -38,14 +39,18 @@ public class AreaRectangles {
         for (int i = 0; i < rectInputs.length; i++) {
             areas[i] = abs(rectInputs[i][0] * (rectInputs[i][3] - rectInputs[i][5]) + rectInputs[i][2] * (rectInputs[i][5] - rectInputs[i][1]) + rectInputs[i][4] * (rectInputs[i][1] - rectInputs[i][3]));
         }
+        
+        return areas;
 
+
+    }
+
+    static void output(float[][] rectInputs, float[] areas){
         System.out.println(Arrays.toString(areas));
 
         for (int i = 0, j = 0; i < rectInputs.length && j < rectInputs[i].length; i++, j++) {
             System.out.println("The area of the rectangle with the vertices" + "(" + rectInputs[i][j] + ")" + " is " + areas[i]);
         }
-
     }
-
-    }
+}
 
