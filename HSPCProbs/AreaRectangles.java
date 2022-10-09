@@ -43,7 +43,7 @@ public class AreaRectangles {
 
         for (int i = 0, j = 0; i < rectInputs.length && j < rectInputs[i].length; i++, j++) {
             System.out.println("The area of the rectangle with the vertices" + "(" + rectInputs[i][j] + ")" + " is " + areas[i]);
-        }
-    }
+        }  
+    }  
 }
 
